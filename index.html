@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Attendance</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Smart<span>Attend</span></div>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#features">Features</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <a href="login.html">
+    <button class="login">Login</button>
+    </a>
+    <button onclick="toggleTheme()" id="themeBtn">🌙
+        Dark Mode</button>
+</header>
+
+
+<section class="hero">
+
+<div class="hero-text">
+    <h1>Smart Attendance</h1>
+
+    <p>
+         Smart Attendance System is a modern 
+         web-based solution for colleges. It
+         Recognition, GPS Location Tracking,attendance
+         Real-Time Reports,making attendance faster,
+         smarter,and more accurate.
+    </p>
+<a href="entry.html">
+    <button>Get Started</button>
+</a>
+</div>
+
+
+
+<div class="zero-image">
+    <img src="https://t4.ftcdn.net/jpg/06/32/01/17/360_F_632011725_wLo7D2z2Hv4Wg4Pryecac43GXLJkqv5b.jpg">
+</div>
+
+</section>
+
+
+
+<section id="features">
+
+<h2 style="text-align: center;">Our Smart Features</h2>
+
+<div class="cards">
+
+<a href="location.html" class="'feature-card">    
+<div class="card">
+    <div class="icon">📍</div>
+    <h3>Location Tracking</h3>
+    <p>GPS based attendance verification.</p>
+</div>
+</a>
+
+<a href="face.html" class="feature-card">
+<div class="card">
+    <div class="icon">📷</div>
+    <h3>Face Recognition</h3>
+    <p>face verification system.</p>
+</div>
+</a>
+
+<a href="report.html" class="feature-card">
+<div class="card">
+    <div class="icon">📊</div>   
+    <h3>Reports</h3>
+    <p>Track attendance analytics easily.</p>
+    
+</div>
+</a>
+
+
+
+<div class="card"
+onclick="window.location.href='alerts.html'"
+style="cursor:pointer;">    
+    <div class="icon">🔔</div>
+    <h3 style="text-decoration:underline;
+    text-decoration-color:blue;"> 
+        Alerts</h3>
+    <p style="text-decoration:underline;
+    text-decoration-color:blue;">
+    Instant attendance notifications.</p>
+</div>
+
+
+</section>
+
+
+
+<section class="dashboard">
+
+<img src="https://images.unsplash.com/photo-1556761175-b413da4baf72">
+
+<div>
+<h2>Digital Attendance Dashboard</h2>
+Dashboard Features:<br>
+<p>✅ Real-Time Attendance Monitoring</p>
+<p>👨‍🎓 Student & Teacher Records</p>
+<p>📊 Attendance Analytics & Reports</p>
+<p>📍 GPS Location Verification</p>
+<p>📷 Face Recognition Verification</p>
+<p>🔔 Instant Attendance Alerts</p>
+<p>📅 Daily, Weekly & Monthly Reports</p>
+
+
+<a href="dashboard.html">
+<button class="btn">View Dashboard</button>
+</a>
+
+</div>
+
+</section>
+
+
+
+<section id="about">
+<h2 style="text-align: center;">About SmartAttend</h2>
+<br>
+<p style="text-align: center;">
+    SmartAttend is an advanced web-based attendance
+    management system developed to simplify and
+    modernize the attendance process in educational 
+    institutions. It uses Face Recognition, GPS Location 
+    Verification, and a Digital Attendance Dashboard to
+    ensure secure and accurate attendance records.
+    
+    The system helps students, teachers, and
+    administrators manage attendance efficiently
+    through real-time updates, smart reports, AI Chatbot 
+    support, and easy-to-use dashboards. SmartAttend 
+    reduces manual work, improves accuracy, saves
+    time, and provides a secure digital attendance 
+    experience.
+</p>
+</section>
+</br>
+
+<section id="contact">
+    <h2 style="text-align: center;">Contact Us</h2>
+    <p style="text-align: center;">📧 Email : support@smartattend.com</p>
+    <p style="text-align: center;">📞 Phone : +91 7021462206</p>
+    <p style="text-align: center;">📍 Location : kharghar, Maharashtra</p>
+    
+</section>
+
+<footer>
+
+<h2>SmartAttend</h2>
+<p>2026 Smart Attendance | All Rights Reserved.</p>
+
+</footer>
+<script>
+function toggleTheme(){
+    document.body.classList.toggle("dark-mode");
+
+    let btn = document.getElementById("themeBtn");
+
+    if(document.body.classList.contains("dark-mode")){
+        btn.innerHTML="☀️ Light Mode";
+    }else{
+        btn.innerHTML="🌙 Dark Mode";
+    }
+}
+</script>
+
+</body>
+</html>

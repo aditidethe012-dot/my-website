@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SmartAttend AI</title>
+
+<style>
+
+body{
+    background:#eef5ff;
+    font-family:'Poppins',sans-serif;
+}
+
+
+/* Floating Button */
+
+.chat-btn{
+    position:fixed;
+    right:30px;
+    bottom:30px;
+    background:#2563eb;
+    color:white;
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:30px;
+    cursor:pointer;
+    box-shadow:0 5px 20px #999;
+}
+
+
+/* Chat Window */
+
+.chatbot{
+    width:360px;
+    height:550px;
+    background:white;
+    position:fixed;
+    right:30px;
+    bottom:100px;
+    border-radius:25px;
+    box-shadow:0 10px 30px #aaa;
+    overflow:hidden;
+}
+
+
+/* Header */
+
+.header{
+    background:linear-gradient(135deg,#2563eb,#6d28d9);
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+
+.header h2{
+    margin:0;
+}
+
+
+/* Chat Area */
+
+.chatbox{
+    height:340px;
+    padding:15px;
+    overflow:auto;
+}
+
+
+.bot{
+    background:#e8f0ff;
+    padding:12px;
+    border-radius:15px;
+    margin:10px;
+}
+
+
+.user{
+    background:#2563eb;
+    color:white;
+    padding:12px;
+    border-radius:15px;
+    margin:10px;
+    text-align:right;
+}
+
+
+/* Quick Buttons */
+
+.quick button{
+
+    background:#eef2ff;
+    border:none;
+    padding:8px;
+    margin:5px;
+    border-radius:20px;
+    cursor:pointer;
+
+}
+
+
+/* Input */
+
+.input{
+    display:flex;
+    padding:10px;
+}
+
+
+input{
+    flex:1;
+    border-radius:25px;
+    padding:12px;
+    border:1px solid #ccc;
+}
+
+
+.send{
+    background:#2563eb;
+    color:white;
+    border:none;
+    border-radius:50%;
+    width:45px;
+    margin-left:8px;
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="chatbot">
+
+<div class="header">
+<h2>🤖 SmartAttend AI</h2>
+<p>Your Attendance Assistant</p>
+</div>
+
+
+<div class="chatbox" id="chatbox">
+
+<div class="bot">
+Hi Student 👋<br>
+I can help you with attendance, reports & schedule.
+</div>
+
+
+<div class="quick">
+<button onclick="quick('attendance')">
+📊 Attendance
+</button>
+
+<button onclick="quick('report')">
+📄 Report
+</button>
+
+<button onclick="quick('class')">
+📅 Schedule
+</button>
+
+</div>
+
+
+</div>
+
+
+
+<div class="input">
+
+<input id="msg" placeholder="Ask SmartAttend...">
+
+<button class="send" onclick="send()">
+➤
+</button>
+
+</div>
+
+
+</div>
+
+
+
+<script>
+
+
+function send(){
+
+let text=document.getElementById("msg").value;
+
+reply(text);
+
+document.getElementById("msg").value="";
+
+}
+
+
+function quick(text){
+
+reply(text);
+
+}
+
+
+
+function reply(text){
+
+let chat=document.getElementById("chatbox");
+
+
+chat.innerHTML += 
+"<div class='user'>"+text+"</div>";
+
+
+let ans="I can help you with attendance 😊";
+
+
+if(text.includes("attendance"))
+ans="Your current attendance is 92% ✅";
+
+
+else if(text.includes("report"))
+ans="Your monthly attendance report is ready 📊";
+
+
+else if(text.includes("class"))
+ans="Your next lecture is at 9:00 AM 📅";
+
+
+chat.innerHTML += 
+"<div class='bot'>"+ans+"</div>";
+
+}
+
+
+</script>
+
+
+</body>
+</html>

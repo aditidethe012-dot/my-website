@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SmartAttend Notifications</title>
+
+<style>
+
+body{
+font-family:Arial,sans-serif;
+background:#eef5ff;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+margin:0;
+}
+
+.box{
+background:white;
+width:420px;
+padding:30px;
+border-radius:15px;
+box-shadow:0 10px 20px rgba(0,0,0,.2);
+}
+
+h2{
+text-align:center;
+color:#0d1b3d;
+margin-bottom:20px;
+}
+
+.note{
+padding:15px 0;
+border-bottom:1px solid #ddd;
+font-size:18px;
+}
+
+.time{
+color:gray;
+font-size:14px;
+margin-top:5px;
+}
+
+.buttons{
+display:flex;
+justify-content:space-between;
+margin-top:25px;
+}
+
+button{
+padding:10px 20px;
+border:none;
+border-radius:25px;
+background:#1976d2;
+color:white;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{
+background:#0d47a1;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="box">
+
+<h2>🔔 SmartAttend Notifications</h2>
+
+<div class="note">
+🟢 Attendance Marked Successfully
+<div class="time">Just Now</div>
+</div>
+
+<div class="note">
+📍 Location Verified
+<div class="time">2 min ago</div>
+</div>
+
+<div class="note">
+😊 Face Verified
+<div class="time">2 min ago</div>
+</div>
+
+<div class="note">
+📩 SMS Sent to Student
+<div class="time">3 min ago</div>
+</div>
+
+<div class="note">
+📧 Email Sent to Faculty
+<div class="time">3 min ago</div>
+</div>
+
+<div class="note">
+👨‍👩‍👧 Parent Notified
+<div class="time">4 min ago</div>
+</div>
+
+<div class="buttons">
+
+<button onclick="location.reload()">🗑️ Clear All</button>
+
+<a href="index.html">
+<button>🏠 Back to Home</button>
+</a>
+
+</div>
+
+</div>
+
+</body>
+</html>

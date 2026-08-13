@@ -1,0 +1,169 @@
+<!DOCTYPE html>  <html lang="en">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<title>Face Recognition | SmartAttend</title>  <style>  
+  
+*{  
+margin:0;  
+padding:0;  
+box-sizing:border-box;  
+font-family:Arial,sans-serif;  
+}  
+  
+body{  
+background:#f4f9ff;  
+}  
+  
+header{  
+background:#0d1b3d;  
+color:white;  
+text-align:center;  
+padding:20px;  
+font-size:28px;  
+font-weight:bold;  
+}  
+  
+.hero{  
+display:flex;  
+justify-content:space-around;  
+align-items:center;  
+padding:60px;  
+flex-wrap:wrap;  
+}  
+  
+.hero img{  
+width:420px;  
+border-radius:15px;  
+box-shadow:0 10px 20px rgba(0,0,0,.2);  
+}  
+  
+.text{  
+max-width:500px;  
+}  
+  
+.text h1{  
+font-size:45px;  
+color:#0d1b3d;  
+margin-bottom:20px;  
+}  
+  
+.text p{  
+font-size:18px;  
+line-height:30px;  
+color:#555;  
+}  
+  
+button{  
+margin-top:25px;  
+padding:12px 30px;  
+background:#1976d2;  
+color:white;  
+border:none;  
+border-radius:30px;  
+font-size:17px;  
+cursor:pointer;  
+}  
+  
+button:hover{  
+background:#0d47a1;  
+}  
+  
+.features{  
+padding:50px;  
+text-align:center;  
+}  
+  
+.cards{  
+display:grid;  
+grid-template-columns:repeat(2,1fr);  
+gap:20px;  
+max-width:900px;  
+margin:auto;  
+}  
+  
+.card{  
+background:white;  
+padding:25px;  
+border-radius:15px;  
+box-shadow:0 8px 15px rgba(0,0,0,.1);  
+}  
+  
+.card h3{  
+color:#1976d2;  
+margin-bottom:10px;  
+}  
+  
+footer{  
+background:#0d1b3d;  
+color:white;  
+text-align:center;  
+padding:20px;  
+margin-top:40px;  
+}  
+  
+</style>  </head>  <body>  <header>  
+📷 SmartAttend - Face Recognition  
+</header>  <section class="hero">  <div class="text">  <h1>AI Face Recognition</h1>  <p>  
+SmartAttend uses AI Face Recognition technology to identify students quickly and accurately before marking attendance. It reduces proxy attendance and improves security.  
+</p>  <button onclick="startCamera()">📸Open Camera</button>
+
+<br><br>
+
+<video id="video" width="400" height="300" autoplay style="border-radius:10px;border:2px solid #1976d2;"></video>
+
+<br><br>
+
+<button onclick="capturePhoto()">📸 Capture Face</button>
+
+<p id="result" style="font-size:20px;color:green;font-weight:bold;"></p>
+
+</div>  <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=900" alt="Face Recognition">  </section>  <section class="features">  <h2>Key Features</h2>  <div class="cards">  <div class="card">  
+<h3>😊 Face Detection</h3>  
+<p>Detects student faces instantly.</p>  
+</div>  <div class="card">  
+<h3>🤖 AI Verification</h3>  
+<p>Matches face with stored records.</p>  
+</div>  <div class="card">  
+<h3>⚡ Fast Recognition</h3>  
+<p>Attendance marked within seconds.</p>  
+</div>  <div class="card">  
+<h3>🔒 Secure Authentication</h3>  
+<p>Prevents fake attendance.</p>  
+</div>  </div>  </section>  <section style="padding:50px;text-align:center;">  <h2>How It Works</h2>  <p style="font-size:18px;line-height:35px;">  1️⃣ Open SmartAttend<br><br>
+
+2️⃣ Click Scan Face<br><br>
+
+3️⃣ AI Detects Face<br><br>
+
+4️⃣ Face Verified<br><br>
+
+5️⃣ Attendance Marked Successfully ✅
+
+</p>  <div style="margin-top:40px;">  
+<a href="index.html">  
+<button>← Back to Home</button>  
+</a>  
+</div>  </section>  <footer>  © 2026 SmartAttend | Face Recognition System
+
+</footer>  
+<script>
+let video = document.getElementById("video");
+
+function startCamera() {
+    navigator.mediaDevices.getUserMedia({ video: true })
+    .then(function(stream) {
+        video.srcObject = stream;
+    })
+    .catch(function(error) {
+        alert("Camera permission denied or camera not found.");
+    });
+}
+
+function capturePhoto() {
+    document.getElementById("result").innerHTML =
+    "✅ Face Captured Successfully!<br>Attendance Marked.";
+}
+</script>
+</body>  
+</html> 

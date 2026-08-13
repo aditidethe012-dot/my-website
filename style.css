@@ -1,0 +1,285 @@
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+
+body{
+    background:#EAF6FF;
+    color:#082F5C;
+}
+
+
+/* Header */
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:#082F5C;
+}
+
+
+.logo{
+    font-size:30px;
+    font-weight:bold;
+    color:#38BDF8;
+}
+
+
+.logo span{
+    color:white;
+}
+
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:15px;
+}
+
+
+button,
+.btn{
+    background:linear-gradient(45deg,#0066ff,#38BDF8);
+    color:white;
+    border:none;
+    padding:12px 28px;
+    border-radius:30px;
+    cursor:pointer;
+}
+
+
+/* Hero */
+
+.hero{
+
+display:flex;
+justify-content:space-around;
+align-items:center;
+padding:80px 8%;
+background:white;
+
+}
+
+
+.hero-text{
+    width:45%;
+}
+
+
+.hero-text h1{
+
+font-size:55px;
+color:#082F5C;
+
+}
+
+
+.hero-text p{
+
+font-size:20px;
+margin:25px 0;
+color:#555;
+
+}
+
+
+.zero-image img{
+
+width:450px;
+height:320px;
+object-fit:cover;
+border-radius:30px;
+
+animation:bounce 2s infinite
+ease-in-out;
+
+}
+
+
+@keyframes bounce{
+    0%,100%{
+        transform: translateY(0);
+    }
+
+50%{
+transform:translateY(-15px);
+}
+
+}
+
+
+
+/* Features */
+
+.features{
+
+padding:70px 8%;
+text-align:center;
+
+}
+
+
+.features h2{
+
+font-size:38px;
+margin-bottom:40px;
+
+}
+
+
+.cards{
+
+display:flex;
+justify-content:center;
+gap:25px;
+
+}
+
+
+.card{
+
+background:white;
+width:250px;
+padding:35px;
+border-radius:25px;
+box-shadow:0 10px 30px #b9dfff;
+transition:.3s;
+
+}
+
+
+.card:hover{
+
+transform:translateY(-15px);
+
+}
+
+
+.icon{
+
+font-size:45px;
+
+}
+
+
+
+/* Dashboard */
+
+.dashboard{
+
+display:flex;
+align-items:center;
+gap:50px;
+padding:80px 8%;
+background:white;
+
+}
+
+
+.dashboard img{
+
+width:450px;
+height:320px;
+object-fit:cover;
+border-radius:30px;
+
+animation:bounce 2s infinite
+ease-in-out;
+
+}
+
+
+@keyframes bounce{
+    0%,100%{
+        transform: translateY(0);
+    }
+
+50%{
+transform:translateY(-15px);
+}
+
+
+}
+
+
+.dashboard h2{
+
+font-size:38px;
+
+}
+
+
+.dashboard p{
+
+margin:20px 0;
+color:#555;
+
+}
+
+
+
+/* About */
+
+.about{
+
+text-align:center;
+padding:70px;
+background:#D9F0FF;
+
+}
+
+
+.about p{
+
+margin-top:20px;
+font-size:18px;
+
+}
+
+
+
+/* Footer */
+
+footer{
+
+background:#082F5C;
+color:white;
+text-align:center;
+padding:40px;
+
+}
+#themeBtn{
+    padding:10px 15px;
+    border:none;
+    border-radius:20px;
+    background:#007bff;
+    color:white;
+    cursor:pointer;
+    margin-left:10px;
+}
+
+body.dark-mode{
+    background:#121212;
+    color:white;
+}
+
+body.dark-mode header{
+    background:#000;
+}
+
+body.dark-mode .hero{
+    background:#1a1a1a;
+}
+
+body.dark-mode .card{
+    background:#2a2a2a;
+    color:white;
+}

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reports Dashboard</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#eef5ff;
+}
+
+header{
+background:#0d1b3d;
+color:white;
+padding:20px;
+text-align:center;
+font-size:30px;
+font-weight:bold;
+}
+
+.container{
+padding:40px;
+}
+
+.cards{
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+margin-bottom:40px;
+}
+
+.card{
+background:white;
+width:220px;
+padding:25px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card h2{
+font-size:40px;
+color:#1565c0;
+}
+
+.card p{
+font-size:18px;
+margin-top:10px;
+}
+
+.chart{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+margin-bottom:40px;
+}
+
+.progress{
+width:100%;
+height:30px;
+background:#ddd;
+border-radius:30px;
+overflow:hidden;
+margin-top:20px;
+}
+
+.bar{
+width:90%;
+height:100%;
+background:#1976d2;
+text-align:center;
+line-height:30px;
+color:white;
+font-weight:bold;
+}
+
+.list{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.list table{
+width:100%;
+border-collapse:collapse;
+}
+
+.list th{
+background:#1976d2;
+color:white;
+padding:15px;
+}
+
+.list td{
+padding:15px;
+text-align:center;
+border-bottom:1px solid #ddd;
+}
+
+.buttons{
+text-align:center;
+margin-top:40px;
+}
+
+button{
+padding:12px 28px;
+background:#1976d2;
+color:white;
+border:none;
+border-radius:30px;
+font-size:16px;
+cursor:pointer;
+margin:10px;
+}
+
+button:hover{
+background:#0d47a1;
+}
+
+footer{
+margin-top:50px;
+background:#0d1b3d;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+📊 SmartAttend Reports Dashboard
+</header>
+
+<div class="container">
+
+<div class="cards">
+
+<div class="card">
+<h2>120</h2>
+<p>Total Students</p>
+</div>
+
+<div class="card">
+<h2>108</h2>
+<p>Present</p>
+</div>
+
+<div class="card">
+<h2>12</h2>
+<p>Absent</p>
+</div>
+
+<div class="card">
+<h2>90%</h2>
+<p>Attendance</p>
+</div>
+
+</div>
+
+<div class="chart">
+
+<h2>📈 Attendance Progress</h2>
+
+<div class="progress">
+<div class="bar">90%</div>
+</div>
+
+</div>
+
+<div class="list">
+
+<h2 style="margin-bottom:20px;">Recent Attendance</h2>
+
+<table>
+
+<tr>
+<th>Student</th>
+<th>Date</th>
+<th>Status</th>
+</tr>
+
+<tr>
+<td>Kranti</td>
+<td>24-07-2026</td>
+<td style="color:green;">✅ Present</td>
+</tr>
+
+<tr>
+<td>Vaishnavi</td>
+<td>24-07-2026</td>
+<td style="color:green;">✅ Present</td>
+</tr>
+
+<tr>
+<td>Aditee</td>
+<td>24-07-2026</td>
+<td style="color:green;">✅ Present</td>
+</tr>
+
+<tr>
+<td>Purva</td>
+<td>24-07-2026</td>
+<td style="color:red;">❌ Absent</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="buttons">
+
+<button onclick="alert('Report Downloaded Successfully!')">
+📥 Download Report
+</button>
+
+<a href="index.html">
+<button>🏠 Back to Home</button>
+</a>
+
+</div>
+
+</div>
+
+<footer>
+© 2026 SmartAttend | Reports Dashboard
+</footer>
+
+</body>
+</html>
